@@ -2,12 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
-gem 'execjs'
-
-gem 'therubyracer'
-
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+
 group :development, :test do
   gem 'sqlite3'
 end
@@ -15,6 +12,13 @@ group :production do
   gem 'pg'
 end
 
+gem 'execjs'
+
+gem 'therubyracer'
+
+gem 'paperclip', :git => 'git://github.com/lmumar/paperclip.git', :branch => 'rails3'
+
+gem 'bartt-ssl_requirement', '~>1.4.0', :require => 'ssl_requirement'
 
 # Gems used only for assets and not required
 # in production environments by default.

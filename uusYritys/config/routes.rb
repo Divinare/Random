@@ -1,11 +1,12 @@
-Blog::Application.routes.draw do
-  resources :posts do
-    resources :comments
-  end
+Pastebin::Application.routes.draw do
+  resources :products
 
-match '/luo' => 'pages#luo'
-  # get "home/index"
 
+  resources :pastes
+
+
+#  get "home/index"
+  root :to => 'pastes#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -55,7 +56,6 @@ match '/luo' => 'pages#luo'
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 

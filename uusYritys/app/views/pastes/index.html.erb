@@ -1,0 +1,28 @@
+<h1>Enemmän kuin pelkkä pastebin</h1>
+<br />
+<hr />
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pastes.each do |paste| %>
+  <tr>
+    <td><%= paste.name %></td>
+    <td><%= paste.content %></td>
+    <td><%= link_to 'Show', paste %></td>
+    <td><%= link_to 'Edit', edit_paste_path(paste) %></td>
+    <td><%= link_to 'Destroy', paste, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+
+<% end %>
+</table>
+<hr />
+
+<br />
+
+<%= link_to 'New Paste', new_paste_path %>
